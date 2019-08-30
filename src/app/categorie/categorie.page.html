@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+
+      <ion-title>categorie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid style="margin-top: 50px;">
+    <ion-row *ngFor="let cat of categories" style="margin-top: 10px;" (click)="onClickCategorie(cat.id)">
+
+        <ion-item style="margin-left: 70px">
+            <ion-thumbnail slot="start">
+                <img src="{{cat.image}}">
+            </ion-thumbnail>
+            <ion-button color="light" style="margin: auto;" expand="block" fill="outline">{{cat.title}}</ion-button>
+        </ion-item>
+    <!--  <ion-col>
+       <a href="{{cat.url}}">
+          <ion-img [src]="cat.image"></ion-img>
+            <div>{{cat.title}}</div>
+        </a>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
+</ion-content>

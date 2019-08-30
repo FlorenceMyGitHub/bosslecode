@@ -1,0 +1,29 @@
+ion-card-content, ion-card-title {
+  color: #fff;
+}
+
+ion-card-subtitle {
+  font-style: italic;
+  color: #bfbebe;
+}
+
+ion-img, img {
+  width: 30%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+ion-item {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+ion-card-content {
+  text-align: justify;
+}
+
+.item .sc-ion-label-md-h {
+  white-space: unset;
+}

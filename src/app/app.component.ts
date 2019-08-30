@@ -10,6 +10,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  menuItems = [
+    {title: 'Catégorie', url: '/categorie', icon: 'cat'},
+    {title: 'Panneaux', url: '/panneaux', icon: 'pan'},
+    {title: 'Quizz', url: '/quizz', icon: 'quizz'},
+    {title: 'Votez', url: '/votez', icon: 'vote'},
+  ]
+
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,

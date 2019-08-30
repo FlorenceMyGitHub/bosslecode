@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  menuItems = [
+    {title: 'Catégorie', url: '/categorie', icon: 'cat'},
+    {title: 'Panneaux', url: '/panneaux', icon: 'pan'},
+    {title: 'Quizz', url: '/quizz', icon: 'quizz'},
+  ]
+
   constructor() {}
+
+
 
 }

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+
+    <ion-title>Explication sur la catégorie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="categorie">
+    <ion-card-header>
+      <ion-card-subtitle>Catégorie</ion-card-subtitle>
+      <ion-card-title>{{categorie.title}}</ion-card-title>
+      <img src="{{categorie.image}}" />
+      <ion-item>
+        <ion-label>Forme: {{categorie.forme}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Couleur: {{categorie.couleur}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Position: {{categorie.position}}</ion-label>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{categorie.comment}}
+
+      <br><br><br>
+      <a href="panneaux?categorie={{categorie.id}}" style="color: #ffa4a4;">Consultez les panneaux de la catégorie "{{categorie.title}}"</a>
+    </ion-card-content>
+
+
+
+
+  </ion-card>
+
+</ion-content>

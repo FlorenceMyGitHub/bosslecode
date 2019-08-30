@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>souscategorie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+  <ion-grid>
+    <ion-row *ngFor="let cat of subcategories">
+      <ion-col>
+        <a href="{{cat.url}}">
+        <ion-img [src]="cat.icon"></ion-img>
+        <div>{{cat.title}}</div>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>panneaux</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid style="margin: 50px;">
+    <ion-row>
+      <ion-col style="margin-bottom: 25px;" size="2" *ngFor="let panneau of panneaux" (click)="onClickPanneau(panneau.id)">
+        <ion-img [src]="panneau.image"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,5 +1,9 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -7,8 +11,13 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+      <ion-list>
+                <ion-item lines="none" button *ngFor="let item of menuItems">
+                  <ion-icon slot="start" name="arrow-round-forward" style=""></ion-icon>
+                  <ion-label>
+                    <a href="{{item.url}}"><h3>{{item.title}}</h3></a>
+                  </ion-label>
+                </ion-item>
+      </ion-list>
+
 </ion-content>
