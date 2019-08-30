@@ -15,10 +15,9 @@ export class PanneauxPage implements OnInit {
   panneaux: Panneau[] = null
 
   constructor(private route: ActivatedRoute, private panneauxService: PanneauxService, private router: Router) {
-
-
     this.route.queryParams.subscribe(params => {
       if (params && params.categorie) {
+        // console.log(params.categorie);
          this.getPanneauxByCat(params.categorie);
       } else {
         this.getPanneaux();
@@ -33,8 +32,8 @@ export class PanneauxPage implements OnInit {
     this.panneaux = this.panneauxService.getAll();
   }
 
-  getPanneauxByCat(cat) {
-    this.panneaux  =  this.panneauxService.getByCategorie(cat);
+  getPanneauxByCat(panneauCategorie) {
+    this.panneaux  =  this.panneauxService.getByCategorie(panneauCategorie);
   }
 
   onClickPanneau(panneauId) {

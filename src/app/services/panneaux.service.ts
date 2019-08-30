@@ -151,16 +151,8 @@ export class PanneauxService {
     return this.panneaux[id];
   }
 
-  /*getByCategorie(categorie: number) {
-    if (categorie < 0 || categorie > 3) {
-      return null;
-    }
-    return this.panneaux[categorie];
-  }*/
 
-  getByCategorie(cat: number) {
-    return this.panneaux.filter((panneaux) => {
-      return panneaux.categorie = cat;
-    });
+  getByCategorie(cat) {
+    return this.panneaux.filter(panneau => panneau.categorie === parseInt(cat));
   }
 }
