@@ -1,5 +1,7 @@
 {
   "name": "bosselecode",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
