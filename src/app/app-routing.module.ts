@@ -11,6 +11,9 @@ const routes: Routes = [
   { path: 'details', loadChildren: './details/details.module#DetailsPageModule' },
   { path: 'detailscategorie', loadChildren: './detailscategorie/detailscategorie.module#DetailscategoriePageModule' },
   { path: 'votez', loadChildren: './votez/votez.module#VotezPageModule' },
+  { path: 'preferences', loadChildren: './preferences/preferences.module#PreferencesPageModule' },
+  { path: 'questionnaire', loadChildren: './quizz/questionnaire/questionnaire.module#QuestionnairePageModule' },
+  { path: 'resultat', loadChildren: './quizz/resultat/resultat.module#ResultatPageModule' },
 ];
 
 @NgModule({

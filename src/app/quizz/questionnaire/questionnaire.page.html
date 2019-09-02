@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>questionnaire</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+  <ion-radio-group allow-empty-selection [(ngModel)]="selected">
+    <img src="{{panneaux.image}}" width="80"/>
 
+    <ion-list-header>
+      <ion-label>{{questions[0].question}}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>{{questions[0].choix1}}</ion-label>
+      <ion-radio value="1" slot="end" color="primary"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{questions[0].choix2}}</ion-label>
+      <ion-radio value="2" slot="end" color="secondary"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{questions[0].choix3}}</ion-label>
+      <ion-radio value="3" slot="end" color="tertiary"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{questions[0].choix4}}</ion-label>
+      <ion-radio value="4" slot="end" color="success"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  </ion-list>
+
+  <ion-button color="primary" (click)="onClickNext()">Suivant</ion-button>
 </ion-content>
